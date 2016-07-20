@@ -1,0 +1,1 @@
+/home/hirobreak/Documents/siadec/siadec/app/OpenCV/CMakeFiles/main.dir
