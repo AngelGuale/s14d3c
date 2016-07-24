@@ -6,7 +6,9 @@
 		<div class="col-md-8 col-md-offset-2 weather-grids widget-shadow">
 			<form  method="post" action="/clasificador" enctype="multipart/form-data">
 				<div class="header-top">
-					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio</h2>
+					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio:</h2>
+					<h2>Clasificador de órganos </h2> 
+
 					<div class="clearfix"> </div>
 				</div>
 			
@@ -32,7 +34,15 @@
 				</div>
 				<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input>
 			</form>
-		<div style= "text-align: center" ><h2 id="result">Resultado: {{ $resultado or ' ' }}</h2></div>
+		<div id="result" style= "text-align: center" >
+		@if(isset($imagen))
+			  <br >
+			  <br >
+			<figure id="preview40"><img src="{{$imagen}}" class="circular"/></figure>
+			@endif
+			<h2 >{{{ isset($resultado) ? "Resultado: ".$resultado : ' ' }}}</h2>
+						
+		</div>
 		
 				
 		</div>

@@ -123,8 +123,8 @@ public function clasificadorForm()
 			$zoom40 = Input::file('fileZoom40');
 		
 		$name3 = "zoom40" . str_random(10) . "." . $zoom40->getClientOriginalExtension();
-		$zoom40->move("../storage", $name3);
-		exec("/usr/bin/python /home/xngel/deploy_cnn/code/make_pred22.py -t /home/xngel/siadec/siadec/storage/".$name3, $output, $return);
+		$zoom40->move("uploads", $name3);
+		exec("/usr/bin/python /home/xngel/deploy_cnn/code/make_pred22.py -t /home/xngel/siadec/siadec/public/uploads/".$name3, $output, $return);
 		if ($return) {
 	    throw new \Exception("Error executing command - error code: $return");
 		}
@@ -147,8 +147,10 @@ public function clasificadorForm()
 		'12' =>"organo linfoide" ,
 		);
 		$resultado=$dictionario[$salida];
-		return view('image_class_form')->with('resultado', $resultado);
-	
+		$imagen=asset("uploads/".$name3);
+		$args= array('resultado' =>$resultado , 
+			'imagen'=>$imagen);
+		return view('image_class_form')->with($args);
 				}
 		return "nofile";
 	}
