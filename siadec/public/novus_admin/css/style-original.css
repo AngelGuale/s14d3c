@@ -95,7 +95,7 @@ button#showLeftPush:hover {
     height: 100%;
     top: 76px;
     z-index: 1000;
-    background-color:#3e6aa8;
+    background-color:#315384;
 	padding: 2em 0;
 }
 .cbp-spmenu-left {
@@ -211,7 +211,7 @@ ul.dropdown-menu{
 /*--//side-menu--*/
 /* ----Logo----*/
 .logo {
-    background: #3e6aa8;
+    background: #315384;
     text-align: center;
     float: left;
     margin-left:-2.5%;
@@ -1001,10 +1001,6 @@ h4.title {
     color: #fff;
     letter-spacing: 1px;
 }
-.wid-social .twitter{
-  font-size: 1em !important;
-
-}
 .twitter {
   background-color:#55acee !important;
   color: #ffffff !important;
@@ -1055,7 +1051,7 @@ h4.title {
 }
 .wid-social:hover .social-icon {
     transform: rotatey(360deg);
-    transition: .7s all;
+    transition: .5s all;
 }
 /*--//social-media--*/
 /*--calender --*/
@@ -2599,36 +2595,6 @@ i.fa.fa-facebook.profile-icon {
 }
 }
 @media(max-width:1280px){
-/**Logo section**/
-.logo {
-    text-align: center;
-    margin-left:2%;
-}
-.logo a {
-    padding: 0.9em 0em .7em;
-}
-.logo a h1 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    font-weight: 700;
-    text-align: center;
-}
-.logo a span {
-    font-size: .7em;
-    text-align: center;
-    letter-spacing: 4px;
-}
-/**End Logo Section**/
-/**Push Menu**/
-.cbp-spmenu-left {
-    left: 0;
-    margin-right:-10%;
-    width:23.7%;
-}
-.cbp-spmenu-left.cbp-spmenu-open {
-  left: -309px;
-}
-/**End Push Menu**/
 .profile-text {
     padding: 1.5em 2em;
 }
@@ -2676,36 +2642,9 @@ i.fa.fa-facebook.profile-icon {
 }
 }
 @media(max-width:1080px){
-/**Logo section**/
-.logo {
-    text-align: center;
-    margin-left:2%;
-}
 .logo a {
-    padding: 0.9em 0 .7em;
+    padding: 0.9em 2.35em .7em;
 }
-.logo a h1 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    font-weight: 700;
-    text-align: center;
-}
-.logo a span {
-    font-size: .7em;
-    text-align: center;
-    letter-spacing: 3px;
-}
-/**End Logo Section**/
-/**Push Menu**/
-.cbp-spmenu-left {
-    left: 0;
-    margin-right:-10%;
-    width:23.9% !important;
-}
-.cbp-spmenu-left.cbp-spmenu-open {
-  left: -309px;
-}
-/**End Push Menu**/
 .cbp-spmenu-vertical {
     width: 278px;
 }
@@ -2994,35 +2933,6 @@ h3.title1 {
 }
 .logo a span {
     letter-spacing: 5px;
-}
-/**Logo section**/
-.logo {
-    text-align: center;
-    margin-left:1%;
-}
-.logo a {
-    padding: 1.4em 0 .7em;
-}
-.logo a h1 {
-    font-size: 1em;
-    line-height: 1.2em;
-    font-weight: 700;
-    text-align: center;
-}
-.logo a span {
-    font-size: .5em;
-    text-align: center;
-    letter-spacing: 3px;
-}
-/**End Logo Section**/
-/**Push Menu**/
-.cbp-spmenu-left {
-    left: 0;
-    margin-right:-10%;
-    width:23.4% !important;
-}
-.cbp-spmenu-left.cbp-spmenu-open {
-  left: -309px;
 }
 .search-box {
     width: 39%;

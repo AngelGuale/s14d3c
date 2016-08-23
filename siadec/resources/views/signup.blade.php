@@ -1,13 +1,23 @@
 @extends("guest_base")
 
 @section('content')
+<style>
+	input[type="submit"]{
+		width: 100% !important;
+		margin: auto !important;
+		
+	}
+	.sub_home{
+		margin: auto !important;
+	}
+</style>
 	<div class="main-page signup-page">
 		<h3 class="title1">Formulario de Registro</h3>
-		<p class="creating">Por medio de este registro podra acceder a los beneficios que SIADEC ha preparado para usted</p>
+		<p class="creating">Por medio de este registro podr&aacute; acceder a los beneficios que SIADEC ha preparado para usted</p>
 		<form method="POST" action="/register">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 			<div class="sign-up-row widget-shadow">
-				<h5>Informacion de su Cuenta :</h5>
+				<h5>Informaci&oacute;n de su Cuenta :</h5>
 				<div class="sign-u">
 					<div class="sign-up1">
 						<h4>Nombres* :</h4>
@@ -54,7 +64,7 @@
 					<div class="clearfix"> </div>
 				</div>
 				<div class="sub_home">
-					<input type="submit" value="Submit">
+					<input type="submit" value="Enviar solicitud de registro" style="left:50%">
 					<div class="clearfix"> </div>
 				</div>
 			</div>

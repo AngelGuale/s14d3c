@@ -177,11 +177,12 @@
     random_images[0] = "camarones_bg0.jpg"; // these are the background images
     random_images[1] = "camarones_bg1.jpg"; 
     random_images[2] = "camarones_bg2.jpg"; 
+    random_images[3] = "camarones_bg3.jpg";
 
 	var fade = function(){
 
 		image_current++;
-		if (image_current > 2){
+		if (image_current > 3){
 			image_current = 0;
 		}
 		console.log(image_current);

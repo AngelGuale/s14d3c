@@ -58,6 +58,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	}
+	.auth-links-guest{
+		height:100%;
+
+
+	}
 </style>
 </head> 
 <body class="cbp-spmenu-push">
@@ -70,13 +75,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<li>
 							<a href="/"><i class="fa fa-home nav_icon"></i>Inicio</a>
 						</li>
-						<li>
+						<!--<li>
 							<a href="/login"><i class="fa fa-user nav_icon"></i>Iniciar Sesion</a>
 						</li>
 						<li>
 							<a href="/signup"><i class="fa fa-file-o nav_icon"></i>Registrarse</a>
-						</li>
-						
+						</li>-->
 					</ul>
 					<div class="clearfix"> </div>
 					<!-- //sidebar-collapse -->
@@ -85,13 +89,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--left-fixed -navigation-->
 		<!-- header-starts -->
-		<div class="sticky-header header-section">
-			<div class="header-left">
+		<div class="sticky-header header-section col-sm-12 col-md-12 col-lg-12">
+			<div class="header-left col-sm-10 col-md-10 col-lg-10">
 				<!--toggle button start-->
-				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
-				<!--toggle button end-->
+				<div class="col-sm-1 col-md-1 col-lg-1">
+					<button id="showLeftPush" style="margin-left: -70%"><i class="fa fa-bars"></i></button>
+					<!--toggle button end-->
+				</div>
 				<!--logo -->
-				<div class="logo">
+				<div class="logo col-sm-2 col-md-2 col-lg-2" id="logoPlacement">
 					<a href="/">
 						<h1>SIADEC</h1>
 						<span>Administrador</span>
@@ -100,7 +106,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!--//logo-->
 				<div class="clearfix"> </div>
 			</div>
-			<div class="header-right"> 
+			<div class="auth-links-guest header-right col-sm-2 col-md-2 col-lg-2">
+				<div class="profile_details_left"><!--notifications of menu start -->
+					<div class="clearfix"> </div>
+				</div>
+				<!--notification menu end -->
+				<div class="auth-links-guest profile_details col-sm-12 col-md-12 col-lg-12">		
+					<a href="/login" class="dropdown-toggle col-sm-6 col-md-6 col-lg-6" align="center">
+						<div class="profile_img">	
+							<div class="user-name">
+								<p>Iniciar Sesi&oacute;n</p>
+							</div>
+						</div>
+					</a>
+					<a href="/signup" class="dropdown-toggle col-sm-6 col-md-6 col-lg-6" align="center">
+						<div class="profile_img">
+							<div class="user-name">
+								<p>Registrarse</p>
+							</div>
+						</div>
+					</a>
+				</div>	      
 			</div>
 			<div class="clearfix"> </div>	
 		</div>

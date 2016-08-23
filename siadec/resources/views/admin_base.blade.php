@@ -46,6 +46,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <script src="{{ asset('/novus_admin/js/custom.js') }}"></script>
 <link href="{{ asset('/novus_admin/css/custom.css') }}" rel="stylesheet">
 <!--//Metis Menu -->
+<!--Main Menu-->
+<link href="{{ asset('/css/main_menu.css') }}" rel="stylesheet">
 
 <style>
 	.circular {
@@ -60,12 +62,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	}
 </style>
 </head> 
-<body class="cbp-spmenu-push">
-	<div class="main-content">
+<body class="cbp-spmenu-push col-sm-12 col-md-12 col-lg-12">
+	<div class="main-content col-sm-12 col-md-12 col-lg-12">
 		<!--left-fixed -navigation-->
-		<div class=" sidebar" role="navigation">
-            <div class="navbar-collapse">
-				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1">
+		<div class=" sidebar col-sm-12 col-md-12 col-lg-12" role="navigation">
+            <div class="navbar-collapse col-sm-3 col-md-3 col-lg-3">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open col-sm-3 col-md-3 col-lg-3" id="cbp-spmenu-s1">
 					<ul class="nav" id="side-menu">
 						<li>
 							<a href="/home"><i class="fa fa-home nav_icon"></i>Inicio</a>
@@ -87,13 +89,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--left-fixed -navigation-->
 		<!-- header-starts -->
-		<div class="sticky-header header-section ">
-			<div class="header-left">
+		<div class="sticky-header header-section col-sm-12 col-md-12 col-lg-12">
+			<div class="header-left col-sm-10 col-md-10 col-lg-10">
 				<!--toggle button start-->
-				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
-				<!--toggle button end-->
+				<div class="col-sm-1 col-md-1 col-lg-1">
+					<button id="showLeftPush" style="margin-left: -70%"><i class="fa fa-bars"></i></button>
+					<!--toggle button end-->
+				</div>
 				<!--logo -->
-				<div class="logo">
+				<div class="logo col-sm-2 col-md-2 col-lg-2" id="logoPlacement">
 					<a href="/home">
 						<h1>SIADEC</h1>
 						<span>Administrador</span>
@@ -102,7 +106,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!--//logo-->
 				<div class="clearfix"> </div>
 			</div>
-			<div class="header-right">
+			<div class="header-right col-sm-2 col-md-2 col-lg-2">
 				<div class="profile_details_left"><!--notifications of menu start -->
 					<div class="clearfix"> </div>
 				</div>
@@ -113,8 +117,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
 									<div class="user-name">
-										<p>Pedro</p>
-										<span>Administrator</span>
+										<p>{{ $name }}</p>
+										<span>Administrador</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>

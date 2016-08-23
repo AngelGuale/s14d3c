@@ -41,20 +41,37 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('admin_home');
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+		return view('admin_home')->with($args);
 	}
 
 	public function analisisMicroscopioForm()
 	{
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
 		return view('analyze');
 	}
 
 public function clasificadorForm()
 	{
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
 		return view('image_class_form');
 	}
 
-	public function analisisMicroscopio(Request $request){
+public function analisisMicroscopio(Request $request){
+
+	if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
 
 		$zoom4 = Input::file('fileZoom4');
 		$zoom10 = Input::file('fileZoom10');
@@ -116,7 +133,12 @@ public function clasificadorForm()
 		return view('result_class')->with('resultado', $resultado);
 	
 	}
-	public function clasificador(){
+
+public function clasificador(){
+
+	if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
 
 		if(Input::hasFile('fileZoom40')){
 		$output=array();
