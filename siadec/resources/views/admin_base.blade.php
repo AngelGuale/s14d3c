@@ -77,6 +77,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<!-- /nav-second-level -->
 						</li>
 						<li>
+							<a href="/clasificador"><i class="fa fa-search nav_icon"></i>Clasificador</a>
+							<!-- /nav-second-level -->
+						</li>
+						<li>
 							<a href="/analyzeLog"><i class="fa fa-th-list nav_icon"></i>Historial</a>
 							<!-- /nav-second-level -->
 						</li>

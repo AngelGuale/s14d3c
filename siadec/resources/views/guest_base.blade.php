@@ -100,7 +100,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="logo col-sm-2 col-md-2 col-lg-2" id="logoPlacement">
 					<a href="/">
 						<h1>SIADEC</h1>
-						<span>Administrador</span>
+						<span style="padding-left:.7em !important;">Invitado</span>
 					</a>
 				</div>
 				<!--//logo-->

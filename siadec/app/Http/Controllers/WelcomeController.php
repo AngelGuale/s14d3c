@@ -56,7 +56,11 @@ class WelcomeController extends Controller {
 		if (!Session::get('user_id')){
 			return Redirect::to('/home');
 		}
-		return view('analyze');
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+		return view('analyze')->with($args);
 	}
 
 public function clasificadorForm()
@@ -64,7 +68,11 @@ public function clasificadorForm()
 		if (!Session::get('user_id')){
 			return Redirect::to('/home');
 		}
-		return view('image_class_form');
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+		return view('image_class_form')->with($args);
 	}
 
 public function analisisMicroscopio(Request $request){
@@ -72,6 +80,10 @@ public function analisisMicroscopio(Request $request){
 	if (!Session::get('user_id')){
 			return Redirect::to('/home');
 		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
 
 		$zoom4 = Input::file('fileZoom4');
 		$zoom10 = Input::file('fileZoom10');
@@ -130,7 +142,7 @@ public function analisisMicroscopio(Request $request){
 		var_dump($output);
 		error_log("ok");
 		$resultado=$output;
-		return view('result_class')->with('resultado', $resultado);
+		return view('result_class')->with('resultado', $resultado)->with($args);
 	
 	}
 
@@ -139,6 +151,7 @@ public function clasificador(){
 	if (!Session::get('user_id')){
 			return Redirect::to('/home');
 		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
 
 		if(Input::hasFile('fileZoom40')){
 		$output=array();
@@ -170,18 +183,26 @@ public function clasificador(){
 		);
 		$resultado=$dictionario[$salida];
 		$imagen=asset("uploads/".$name3);
-		$args= array('resultado' =>$resultado , 
-			'imagen'=>$imagen);
+		$args= array(
+			'resultado' =>$resultado , 
+			'imagen'=>$imagen,
+			'name' => $dbUser->nombre
+			);
 		return view('image_class_form')->with($args);
 				}
 		return "nofile";
 	}
 	public function analyzeLog(){
 
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+
 		$user=User::where('id', Session::get('user_id'))->first();
 		$exams = $user->Examen;
 		error_log('examenes ' . count($exams));
-		return view('admin_exams')->with('examenes', $exams);
+		return view('admin_exams')->with('examenes', $exams)->with($args);
 	}
 
 }
