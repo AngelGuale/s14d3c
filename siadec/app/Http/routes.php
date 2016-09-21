@@ -36,6 +36,7 @@ Route::get('/clasificador', 'WelcomeController@clasificadorForm');
 
 Route::post('/clasificador', 'WelcomeController@clasificador');
 
+Route::post('/SIFTClass', 'WelcomeController@SIFTclass');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -205,4 +205,56 @@ public function clasificador(){
 		return view('admin_exams')->with('examenes', $exams)->with($args);
 	}
 
+	///Clasificador SIFT
+
+
+	/*public function SIFTclass(){
+
+	if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+
+		if(Input::hasFile('fileZoom40')){
+		$output=array();
+			$zoom40 = Input::file('fileZoom40');
+		
+		$name3 = "zoom40" . str_random(10) . "." . $zoom40->getClientOriginalExtension();
+		$zoom40->move("uploads", $name3);
+		exec("/usr/bin/python /home/crobby/Pruebas/Siadec/Siadec-GitHub/siadec/app/SIFT/Bag_of_Features/classify.py -c /home/crobby/Pruebas/Siadec/Siadec-GitHub/siadec/app/SIFT/Bag_of_Features/model/codebook.file -m /home/crobby/Pruebas/Siadec/Siadec-GitHub/siadec/app/SIFT/Bag_of_Features/model/trainingdata.svm.model /home/crobby/Pruebas/Siadec/Siadec-GitHub/siadec/app/SIFT/Bag_of_Features/organo_.40.bmp", $output, $return);
+		if ($return!=0) {
+	      error_log('Error running script'. $return);
+		}
+		//error_log($output);
+		var_dump($output);
+		error_log("ok");
+		$salida=$output;
+		$dictionario= array('0' =>"branquias" ,
+		'1' =>"conectivo estomago" ,
+		'2' =>"corazon" ,
+		'3' =>"cordon nervioso" ,
+		'4' =>"epitelio del cuerpo" ,
+		'5' =>"epitelio del estomago" ,
+		'6' =>"epitelio del intestino" ,
+		'7' =>"glandula antenal" ,
+		'8' =>"hematopoyetico" ,
+		'9' =>"hepatopancreas" ,
+		'10' =>"musculo" ,
+		'11' =>"organo linfoide" ,
+		'12' =>"pleopodos" ,
+		);
+		//$resultado=$dictionario[$salida];
+		$imagen=asset("uploads/".$name3);
+		$args= array(
+			//'resultado' =>$resultado , 
+			'imagen'=>$imagen,
+			'name' => $dbUser->nombre
+			);
+		return view('image_class_form')->with($args);
+				}
+		return "nofile";
+	}*/
+
 }
+
+

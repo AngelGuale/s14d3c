@@ -4,7 +4,8 @@
 <div class="main-page">
 	<div class="elements">
 		<div class="col-md-8 col-md-offset-2 weather-grids widget-shadow">
-			<form  method="post" action="/clasificador" enctype="multipart/form-data">
+			<!--<form  method="post" action="/clasificador" enctype="multipart/form-data">-->
+			<form  method="post" action="/SIFTClass" enctype="multipart/form-data">
 				<div class="header-top">
 					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio:</h2>
 					<h2>Clasificador de órganos </h2> 
