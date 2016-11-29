@@ -37,6 +37,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!--//end-animate-->
 <!--skycons-icons-->
 <script src="{{ asset('/novus_admin/js/skycons.js') }}"></script>
+
 <!--//skycons-icons-->
 <!--circlechart-->
 <script src="{{ asset('/novus_admin/js/jquery.circlechart.js') }}"></script>
@@ -48,6 +49,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!--//Metis Menu -->
 <!--Main Menu-->
 <link href="{{ asset('/css/main_menu.css') }}" rel="stylesheet">
+
+
+<script src="{{ asset('/jquery-steps-master/build/jquery.steps.js') }}"></script>
+<link href="{{ asset('/jquery-steps-master/demo/css/jquery.steps.css') }}" rel="stylesheet">
+<script src="{{ asset('/node_modules/chart.js/dist/Chart.bundle.js') }}"></script>
+
 
 <style>
 	.circular {

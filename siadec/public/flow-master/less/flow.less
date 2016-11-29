@@ -1,0 +1,121 @@
+// Transition mixin
+.transition(@transitionA, @transitionB: X, ...) {
+  @props: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+  -webkit-transition: @props;
+  -moz-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
+
+// Opacity mixin
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+// Border Radius mixin
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Flow
+@flow-background:                transparent;
+@flow-width:                     auto;
+@flow-height:                    auto;
+@flow-transition-speed:          .5s;
+@flow-easing:                    ease-in-out;
+
+// Flow controls
+@flow-control-width:             40px;
+@flow-control-height:            40px;
+@flow-control-left:              20px;
+@flow-control-right:             20px;
+@flow-control-size:              30px;
+@flow-control-background-color:  fade(#000, 50%);
+@flow-control-border:            3px solid #fff;
+@flow-control-border-radius:     23px;
+@flow-control-color:             #fff;
+@flow-control-color-hover:       @flow-control-color;
+@flow-control-opacity:           50;
+@flow-control-opacity-hover:     100;
+
+//
+// Flow
+// --------------------------------------------------
+
+.flow {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  line-height: 1;
+  background: @flow-background;
+  width: @flow-width;
+  height: @flow-height;
+
+  .flow-inner {
+    position: relative;
+    z-index: 2;
+    height: @flow-height;
+    .transition(@flow-transition-speed @flow-easing left);
+  }
+}
+
+.flow {
+
+  .item {
+    float:left;
+    position: relative;
+    z-index: 3;
+
+    > img {
+      display: block;
+      line-height: 1;
+    }
+
+    .active {
+      z-index: 4;
+    }
+  }
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.flow-control {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: @flow-control-left;
+  width: @flow-control-width;
+  height: @flow-control-height;
+  margin-top: -(@flow-control-height / 2);
+  font-size: @flow-control-size;
+  line-height: @flow-control-height;
+  color: @flow-control-color;
+  text-align: center;
+  cursor:pointer;
+  background: @flow-control-background-color;
+  border: @flow-control-border;
+  .border-radius(@flow-control-border-radius);
+  .opacity(@flow-control-opacity);
+
+  // ensure no transition
+  // may interfere with other transitions
+  .transition(none);
+
+  // right control
+  &.right {
+    left: auto;
+    right: @flow-control-right;
+  }
+
+  // hover state
+  &:hover {
+    color: @flow-control-color-hover;
+    text-decoration: none;
+    text-shadow:none;
+    .opacity(@flow-control-opacity-hover);
+  }
+}

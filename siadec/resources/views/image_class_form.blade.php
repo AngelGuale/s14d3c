@@ -1,60 +1,364 @@
 @extends('admin_base')
 
 @section('content')
+<!-- 
+<div id="ej">
+
+	<h3>dos</h3>
+	<section>jojo</section>
+</div> -->
 <div class="main-page">
-	<div class="elements">
-		<div class="col-md-8 col-md-offset-2 weather-grids widget-shadow">
-			<!--<form  method="post" action="/clasificador" enctype="multipart/form-data">-->
-			<form  method="post" action="/SIFTClass" enctype="multipart/form-data">
+	<div class="elements " id="ej" >
+	<h3>Datos del análisis</h3>
+		<section>
+		<div class="col-md-11 col-md-offset-1   weather-grids widget-shadow">
+			<form enctype="multipart/form-data" method="post" action="/analisisMicroscopio">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
 				<div class="header-top">
+					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio</h2>
+					<div class="clearfix"> </div>
+				</div>
+		<div class="header-bottom">
+					<div class ="form-body">
+						<div class="form-horizontal">
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="responsable">Responsable: </label> 
+								<div class="col-sm-4"> 
+									<input type="text" placeholder="Nombre y Apellido" id="responsable" name="responsable" class="form-control" required> 
+								</div> 
+							
+								
+							</div>
+						</div>
+						<div class="form-horizontal">
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="codigo">FechaImagenes: </label> 
+								<div class="col-sm-4"> 
+									<input type="date" placeholder="12/12/1990" id="fecha" name="fecha" class="form-control" required> 
+								</div>
+								<label class="col-sm-2 control-label" for="empresa">Empresa: </label> 
+								<div class="col-sm-4"> 
+									<input type="text" placeholder="Empresa" id="empresa" name="empresa" class="form-control" required> 
+								</div> 
+							</div>
+						</div>
+						<div class="form-horizontal">
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="equipos">EquiposUsados: </label> 
+								<div class="col-sm-10"> 
+									<input type="text" placeholder="Equipos usados en la captura de las imagenes" id="equipos" name="equipos" class="form-control" required> 
+								</div> 											
+							</div>
+						</div>
+						<div class="form-horizontal">
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="observaciones">Observaciones: </label> 
+								<div class="col-sm-10"> 
+									<input type="text" placeholder="Observaciones" id="observaciones" name="observaciones" class="form-control" required> 
+								</div> 											
+							</div>
+						</div>
+					</form>
+				</div>
+
+		</section>
+		
+		
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	
+	.wizard > .content > .body {
+        position: relative;
+	}
+	th{
+		text-align: center;
+	}
+	table#clasificador_tabla > tbody > tr > td{
+				vertical-align: middle ;
+				text-align: center;
+				}
+	table#clasificador_tabla > tbody > tr > td>div{
+				margin: auto;
+				}
+	</style>
+
+
+
+		<h3>Clasificador de órganos</h3>
+		<section>
+		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
+			<!--<form  method="post" action="/clasificador" enctype="multipart/form-data">-->
+			<!-- <form  method="post" action="/clasificador" enctype="multipart/form-data">
+			 -->	
+			 	<div class="header-top">
 					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio:</h2>
 					<h2>Clasificador de órganos </h2> 
 
 					<div class="clearfix"> </div>
 				</div>
 			
-				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+			  <table id="clasificador_tabla" class="table table-striped table-bordered" width="80%">
+			  <style type="text/css">
+			  	.loader {
+					  border: 16px solid #f3f3f3;
+					  border-radius: 50%;
+					  border-top: 16px solid blue;
+					  border-bottom: 16px solid blue;
+					  width: 120px;
+					  height: 120px;
+					  -webkit-animation: spin 2s linear infinite;
+					  animation: spin 2s linear infinite;
+					}
+
+					@-webkit-keyframes spin {
+					  0% { -webkit-transform: rotate(0deg); }
+					  100% { -webkit-transform: rotate(360deg); }
+					}
+
+					@keyframes spin {
+					  0% { transform: rotate(0deg); }
+					  100% { transform: rotate(360deg); }
+					}
+			  </style>
+			  	<thead >
+			  		<th >
+			  			Ingrese imagen en zoom: 40x
+					</th>
+					<th >
+			  			Resultado
+
+					</th>
+			  	</thead>
+			  	<tbody>
+			  	<tr>
+			  		<td>
+			  			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
 				
-					<!--<input type="file" name="imagenuno" id="fileZoom40x" accept=".jpg,.bmp" />-->
-					
-				<div class="header-bottom">
-					<div class="header-bottom1" style="width: 100%;">
-						<div class="header-head">
-							<h4>Zoom 40x</h4>
-							<input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
-							<a href="javascript:onLoad(40);" style="cursor: pointer;">
-								<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
-							</a>
-							<br/>
-							<div class="bottom-head">
-								<label id="zoom40">Seleccione una Imagen</label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input>
-			</form>
-		<div id="result" style= "text-align: center" >
-		@if(isset($imagen))
+								<!--<input type="file" name="imagenuno" id="fileZoom40x" accept=".jpg,.bmp" />-->
+									
+								<div class="header-bottom">
+									<div class="header-bottom1" style="width: 100%;">
+										<div class="header-head">
+<!-- 										<h4>Ingrese imagen en zoom: 40x</h4> -->
+											<input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
+											<a href="javascript:onLoad(40);" style="cursor: pointer;">
+												<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
+											</a>
+											<br/>
+											<!-- <div class="bottom-head">
+												<label id="zoom40">Seleccione una Imagen</label>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							<!-- 	<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input> -->
+
+			  		</td>
+			  		<td>
+			  		<div class=" btn-success">Epitelio del estómago</div></td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
+				
+								<!--<input type="file" name="imagenuno" id="fileZoom40x" accept=".jpg,.bmp" />-->
+									
+								<div class="header-bottom">
+									<div class="header-bottom1" style="width: 100%;">
+										<div class="header-head">
+											<!-- <h4>Ingrese imagen en zoom: 40x</h4>
+											 --><input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
+											<a href="javascript:onLoad(40);" style="cursor: pointer;">
+												<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
+											</a>
+											<br/>
+										<!-- 	<div class="bottom-head">
+												<label id="zoom40">Seleccione una Imagen</label>
+											</div> -->
+										</div>
+									</div>
+								</div>
+								<!-- <input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input> -->
+
+			  		</td>
+			  		<td>Procesando..
+			  		<div class = "loader"></div></td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
+				
+								<!--<input type="file" name="imagenuno" id="fileZoom40x" accept=".jpg,.bmp" />-->
+									
+								<div class="header-bottom">
+									<div class="header-bottom1" style="width: 100%;">
+										<div class="header-head">
+											<!-- <h4>Ingrese imagen en zoom: 40x</h4>
+											 --><input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
+											<a href="javascript:onLoad(40);" style="cursor: pointer;">
+												<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
+											</a>
+											<br/>
+											<!-- <div class="bottom-head">
+												<label id="zoom40">Seleccione una Imagen</label>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							<!-- 	<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input> -->
+
+			  		</td>
+			  		<td>Procesando..
+			  		<div class = "loader"></div></td>
+			  	</tr>
+			  	</tbody>
+			  </table>
+			
+		<!-- 	</form>
+		 -->
+		 <!-- 	<div id="result" style= "text-align: center" >
+			@if(isset($imagen))
 			  <br >
 			  <br >
 			<figure id="preview40"><img src="{{$imagen}}" class="circular"/></figure>
+
 			@endif
 			<h2 >{{{ isset($resultado) ? "Resultado: ".$resultado : ' ' }}}</h2>
-						
-		</div>
+			@if(isset($resultado))
+			<a href="/identificador_virus" class="btn btn-success">Indetificar Virus</a> 
+			@endif		
+			</div>
+		 -->				<!-- <div class="clearfix"> </div> -->
 		
+					
+		</div>
+		</section>
+
+
+
+
+
+
+
+
+<!-- 
+
+
+		<h3>Resultados: Identificación de órganos</h3>
+		<section>
+		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
+				<div class="header-top">
+					<h2>Resultados:</h2>
+					<h2>Clasificador de órganos </h2> 
+
+					<div class="clearfix"> </div>
+				</div>
+			
+			<div id="result" style= "text-align: center" >
+			  <br >
+			  <br >
+			<figure id="preview40"><img src="uploads/zoom400VCFM6hjIJ.bmp" class="circular"/></figure>
+			<h2> Órgano: Branquias</h2>
+			</div>
+		<br>
+		<br>
+		<br>
+		<br>
 				
 		</div>
-		<div class="clearfix"> </div>	
+		</section>
+
+ -->
+
+
+
+
+
+
+
+
+		<h3>Resultados Finales: Análisis de virus</h3>
+		<section>
+		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
+		<div class="header-top">
+					<h2>Resultados:</h2>
+					<h2>Análisis de enfermedad </h2> 
+
+					<div class="clearfix"> </div>
+				</div>
+				<br>
+		<div class="col-md-10 col-md-offset-1">Los resultados siguientes presentan el grado de enfermedad encontrado al analizar las imágenes ingresadas </div>
+		
+		<div><canvas id="myChart" width="400" height="100"></canvas></div>
+		<br>
+		<br>
+		</div>
+		
+		</section>
+
+		
 	</div>
 </div>
+
 @stop
 
 @section('scripts')
 <script>
+ $("#ej").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        stepsOrientation: "vertical"
+    });
+
+var ctx = $("#myChart");
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ["WSSV", "Vibriosis", "Grengarinas"],
+        datasets: [{
+            label: 'Porcentaje de enfermedad',
+            data: [100, 29, 43],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+             
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+              
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
 	function onLoad(zoom) {
+			    console.log('on load inicia');
 		if(zoom == 4){
 		    document.getElementById('fileZoom4').click();
 	    }else if(zoom == 10){
@@ -67,9 +371,9 @@
 	function handleFiles(files, zoom) {
 	    var file = files[0];
 	    var imageType = /^image\//;
-
+	    console.log('hand files inicia');
 	    if (imageType.test(file.type)) {
-	      
+	      	    console.log('hand files if');
 		    var img = document.createElement("img");
 		    img.classList.add("circular");
 		    img.file = file;
@@ -93,7 +397,7 @@
 		    reader.readAsDataURL(file);
 
 		}else{
-			
+				    console.log('hand files else');
 			if(zoom == 4){
 			    $('#fileZoom4').val('');
 		    }else if(zoom == 10){
@@ -104,4 +408,6 @@
 		}
 	}
 </script>
+
+
 @stop

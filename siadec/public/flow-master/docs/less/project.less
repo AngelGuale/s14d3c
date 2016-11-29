@@ -1,0 +1,113 @@
+.makeSpan(@columns: 1, @columnWidth: 60, @gutterWidth: 20) {
+  width: 1px * (@columnWidth * @columns) + (@gutterWidth * (@columns - 1));
+}
+
+.jumbotron {
+  padding: 40px 0;
+  background: url(images/dark_dotted.png) repeat 0 0;
+  text-align: center;
+  color: @white;
+  h1 {
+    font-size: 80px;
+    line-height: 1;
+    margin:0 0 20px 0;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 14px 24px;
+    font-size: 24px;
+  }
+  ul {
+    margin:20px 0 0 0;
+    list-style-type: none;
+    color:@gray;
+    li {
+      display: inline;
+      padding: 0 20px;
+    }
+    a {
+      color:@grayLight;
+    }
+  }
+}
+
+aside .nav-list {
+  margin-top: 20px;
+  a {
+    [class*="icon-"] {
+      float:right;
+      font-size: 20px;
+      color:fade(@black, 25%);
+      margin-right: -2px;
+      margin-top: 3px;
+      width:auto;
+    }
+    &:hover {
+      [class*="icon-"] {
+        color:fade(@black, 50%);
+      }
+    }
+  }
+  .active > a {
+    [class*="icon-"] {
+      color:@white;
+    }
+    &:hover {
+      [class*="icon-"] {
+        color:@white;
+      }
+    }
+  }
+  &.affix {
+    top:0;
+    .makeSpan(3);
+    @media (min-width: 1200px) {
+      .makeSpan(3, 70, 30);
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      .makeSpan(3, 42);
+    }
+    @media (max-width: 767px) {
+      width:auto;
+    }
+  }
+}
+
+#content section {
+  margin-bottom: 40px;
+}
+
+#usage-methods {
+  dd {
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    pre {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.table {
+  .table th:first-child {
+    width:30%;
+  }
+  td > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.flow {
+  background:#eee;
+  height:300px;
+  .flow-inner {
+    height:300px;
+  }
+}

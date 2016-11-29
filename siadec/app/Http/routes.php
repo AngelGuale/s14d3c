@@ -35,6 +35,9 @@ Route::get('/analyzeLog', 'WelcomeController@analyzeLog');
 Route::get('/clasificador', 'WelcomeController@clasificadorForm');
 
 Route::post('/clasificador', 'WelcomeController@clasificador');
+Route::get('/identificador_virus', 'WelcomeController@identificadorVirusForm');
+Route::post('/identificador_virus', 'WelcomeController@identificadorVirus');
+
 
 Route::post('/SIFTClass', 'WelcomeController@SIFTclass');
 

@@ -4,9 +4,8 @@
 <div class="main-page">
 	<div class="elements">
 		<div class="col-md-8 col-md-offset-2 weather-grids widget-shadow">
-			<form enctype="multipart/form-data" role="form" method="POST" action="/analisisMicroscopio">
-				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
-
+			<form enctype="multipart/form-data"  method="post" action="/analisisMicroscopio">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}"/>
 				<div class="header-top">
 					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio</h2>
 					<div class="clearfix"> </div>

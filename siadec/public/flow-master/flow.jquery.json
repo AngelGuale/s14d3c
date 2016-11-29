@@ -1,0 +1,29 @@
+{
+	"name": "flow",
+	"title": "Flow.js",
+	"version": "1.0.0",
+	"description": "A simple, intuitive content slider. No coding required.",
+	"keywords": [
+		"slide",
+		"slider",
+		"animation",
+		"data-api",
+		"aria"
+	],
+	"author": {
+		"name": "Ry Racherbaumer",
+		"email": "ry@rygine.com",
+		"url": "rygine.com"
+	},
+	"licenses": [{
+		"type": "Apache-2.0",
+		"url": "http://opensource.org/licenses/Apache-2.0"
+	}],
+	"dependencies": {
+		"jquery": "~1.8"
+	},
+	"homepage": "https://github.com/rygine/flow",
+	"docs": "http://rygine.com/projects/flow.js/docs",
+	"demo": "http://rygine.com/projects/flow.js/docs",
+	"bugs": "https://github.com/rygine/flow/issues"
+}

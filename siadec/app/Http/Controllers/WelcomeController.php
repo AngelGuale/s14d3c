@@ -74,6 +74,18 @@ public function clasificadorForm()
         );
 		return view('image_class_form')->with($args);
 	}
+	public function identificadorVirusForm()
+	{
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+		return view('identificador_virus')->with($args);
+	}
+
 
 public function analisisMicroscopio(Request $request){
 
@@ -192,6 +204,58 @@ public function clasificador(){
 				}
 		return "nofile";
 	}
+
+
+	public function identificadorVirus(){
+
+	if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+
+		if(Input::hasFile('fileZoom40')){
+		$output=array();
+			$zoom40 = Input::file('fileZoom40');
+		
+		$name3 = "zoom40" . str_random(10) . "." . $zoom40->getClientOriginalExtension();
+		$zoom40->move("uploads", $name3);
+		exec("/usr/bin/python /home/xngel/deploy_cnn/code/make_pred22.py -t /home/xngel/siadec/siadec/public/uploads/".$name3, $output, $return);
+		if ($return) {
+	    throw new \Exception("Error executing command - error code: $return");
+		}
+		//error_log($output);
+		//var_dump($output[2]);
+		error_log("ok");
+		$salida=$output[2];
+		$dictionario= array('0' =>"branquias" ,
+		'1' =>"pleopodos" ,
+		'2' =>"corazon" ,
+		'3' =>"cordon_" ,
+		'4' =>"conectivo estomago" ,
+		'5' =>"hepatopancreas" ,
+		'6' =>"epitelio del cuerpo" ,
+		'7' =>"epitelio del estomago" ,
+		'8' =>"epitelio del intestino" ,
+		'9' =>"glandula antenal" ,
+		'10' =>"tejido hematopoyetico" ,
+		'11' =>"musculo" ,
+		'12' =>"organo linfoide" ,
+		);
+		$resultado=$dictionario[$salida];
+		$imagen=asset("uploads/".$name3);
+		$args= array(
+			'resultado' =>$resultado , 
+			'imagen'=>$imagen,
+			'name' => $dbUser->nombre
+			);
+		return view('identificador_virus')->with($args);
+				}
+		return "nofile";
+	}
+
+
+
+
 	public function analyzeLog(){
 
 		$dbUser = User::where('id', Session::get('user_id'))->first();
