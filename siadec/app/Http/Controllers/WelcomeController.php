@@ -206,6 +206,51 @@ public function clasificador(){
 	}
 
 
+
+	public function clasificador_ajax(){
+
+		if(Input::hasFile('fileZoom40')){
+		$output=array();
+			$zoom40 = Input::file('fileZoom40');
+		
+		$name3 = "zoom40" . str_random(10) . "." . $zoom40->getClientOriginalExtension();
+		$zoom40->move("uploads", $name3);
+		exec("/usr/bin/python /home/xngel/deploy_cnn/code/make_pred22.py -t /home/xngel/siadec/siadec/public/uploads/".$name3, $output, $return);
+		if ($return) {
+	    throw new \Exception("Error executing command - error code: $return");
+		}
+		//error_log($output);
+		//var_dump($output[2]);
+		error_log("ok");
+		$salida=$output[2];
+		$dictionario= array('0' =>"branquias" ,
+		'1' =>"pleopodos" ,
+		'2' =>"corazon" ,
+		'3' =>"cordon_" ,
+		'4' =>"conectivo estomago" ,
+		'5' =>"hepatopancreas" ,
+		'6' =>"epitelio del cuerpo" ,
+		'7' =>"epitelio del estomago" ,
+		'8' =>"epitelio del intestino" ,
+		'9' =>"glandula antenal" ,
+		'10' =>"tejido hematopoyetico" ,
+		'11' =>"musculo" ,
+		'12' =>"organo linfoide" ,
+		);
+		$resultado=$dictionario[$salida];
+		$imagen=asset("uploads/".$name3);
+		$args= array(
+			'resultado' =>$resultado , 
+			'imagen'=>$imagen,
+			'name' => $dbUser->nombre
+			);
+		return $resultado;
+				}
+		return "error .c";
+		
+	}
+
+
 	public function identificadorVirus(){
 
 	if (!Session::get('user_id')){

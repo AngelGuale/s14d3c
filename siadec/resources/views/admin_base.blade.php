@@ -80,14 +80,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<a href="/home"><i class="fa fa-home nav_icon"></i>Inicio</a>
 						</li>
 						<li>
-							<a href="/analisisMicroscopio"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
+							<a href="/clasificador"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
 							<!-- /nav-second-level -->
 						</li>
-						<li>
+						<!-- <li>
 							<a href="/clasificador"><i class="fa fa-search nav_icon"></i>Clasificador</a>
-							<!-- /nav-second-level -->
+							
 						</li>
-						<li>
+						 --><li>
 							<a href="/analyzeLog"><i class="fa fa-th-list nav_icon"></i>Historial</a>
 							<!-- /nav-second-level -->
 						</li>

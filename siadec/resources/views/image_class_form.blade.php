@@ -165,7 +165,7 @@
 
 			  		</td>
 			  		<td>
-			  		<div class=" btn-success">Epitelio del estómago</div></td>
+			  		<div class=" btn-success" id="fileZoom40_result">Epitelio del estómago</div></td>
 			  	</tr>
 			  	<tr>
 			  		<td>
@@ -178,9 +178,9 @@
 									<div class="header-bottom1" style="width: 100%;">
 										<div class="header-head">
 											<!-- <h4>Ingrese imagen en zoom: 40x</h4>
-											 --><input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
-											<a href="javascript:onLoad(40);" style="cursor: pointer;">
-												<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
+											 --><input required type="file" name="fileZoom4" id="fileZoom4" onchange="handleFiles(this.files, 4)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
+											<a href="javascript:onLoad(4);" style="cursor: pointer;">
+												<figure id="preview4"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
 											</a>
 											<br/>
 										<!-- 	<div class="bottom-head">
@@ -206,9 +206,9 @@
 									<div class="header-bottom1" style="width: 100%;">
 										<div class="header-head">
 											<!-- <h4>Ingrese imagen en zoom: 40x</h4>
-											 --><input required type="file" name="fileZoom40" id="fileZoom40" onchange="handleFiles(this.files, 40)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
-											<a href="javascript:onLoad(40);" style="cursor: pointer;">
-												<figure id="preview40"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
+											 --><input required type="file" name="fileZoom10" id="fileZoom10" onchange="handleFiles(this.files, 10)" style="visibility:hidden;position:absolute;top:-50;left:-50"/>
+											<a href="javascript:onLoad(10);" style="cursor: pointer;">
+												<figure id="preview10"><img src="{{ asset('/pick.jpg') }}" class="circular"/></figure>
 											</a>
 											<br/>
 											<!-- <div class="bottom-head">
@@ -392,9 +392,28 @@ var myChart = new Chart(ctx, {
 			    $('#result').html("");
 
 		    }
+
+
 		    var reader = new FileReader();
 		    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
 		    reader.readAsDataURL(file);
+
+		 	$.ajax({
+			url: "/clasificador_ajax",
+			type: "post",
+			data:{'fileZoom40': file},
+			dataType: "html",
+			success: function(response){
+
+			$("#fileZoom40_result").html(response);
+			},
+			error: function(xhr, status){
+				alert("error");
+
+			}
+
+
+		 	});
 
 		}else{
 				    console.log('hand files else');
