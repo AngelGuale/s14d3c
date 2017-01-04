@@ -39,7 +39,7 @@ Route::get('/identificador_virus', 'WelcomeController@identificadorVirusForm');
 Route::post('/identificador_virus', 'WelcomeController@identificadorVirus');
 
 
-Route::post('/clasificador_ajax', 'WelcomeController@clasificador_ajax');
+Route::resource('/clasificador_ajax', 'WelcomeController@clasificador_ajax');
 
 
 Route::post('/SIFTClass', 'WelcomeController@SIFTclass');

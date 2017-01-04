@@ -165,7 +165,13 @@
 
 			  		</td>
 			  		<td>
-			  		<div class=" btn-success" id="fileZoom40_result">Epitelio del estómago</div></td>
+			  		<div class=" btn-success" id="fileZoom40_result" hidden>Epitelio del estómago</div>
+			  	 	<div id="fileZoom40_process" hidden>
+			  		Procesando..
+			  		<div class = "loader"></div>
+			  		</div>
+			  		
+			  		</td>
 			  	</tr>
 			  	<tr>
 			  		<td>
@@ -192,8 +198,13 @@
 								<!-- <input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input> -->
 
 			  		</td>
-			  		<td>Procesando..
-			  		<div class = "loader"></div></td>
+			  		<td>
+			  		<div class=" btn-success" id="fileZoom4_result" hidden>Epitelio del estómago</div>
+			  	 	<div id="fileZoom4_process" hidden>
+			  		Procesando..
+			  		<div class = "loader"></div>
+			  		</div>
+			  		</td>
 			  	</tr>
 			  	<tr>
 			  		<td>
@@ -220,69 +231,21 @@
 							<!-- 	<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input> -->
 
 			  		</td>
-			  		<td>Procesando..
-			  		<div class = "loader"></div></td>
+			  		<td>
+			  		<div class=" btn-success" id="fileZoom10_result" hidden>Epitelio del estómago</div>
+			  	 	<div id="fileZoom10_process" hidden>
+			  		Procesando..
+			  		<div class = "loader"></div>
+			  		</div>
+			  		</td>
 			  	</tr>
 			  	</tbody>
 			  </table>
 			
-		<!-- 	</form>
-		 -->
-		 <!-- 	<div id="result" style= "text-align: center" >
-			@if(isset($imagen))
-			  <br >
-			  <br >
-			<figure id="preview40"><img src="{{$imagen}}" class="circular"/></figure>
 
-			@endif
-			<h2 >{{{ isset($resultado) ? "Resultado: ".$resultado : ' ' }}}</h2>
-			@if(isset($resultado))
-			<a href="/identificador_virus" class="btn btn-success">Indetificar Virus</a> 
-			@endif		
-			</div>
-		 -->				<!-- <div class="clearfix"> </div> -->
-		
 					
 		</div>
 		</section>
-
-
-
-
-
-
-
-
-<!-- 
-
-
-		<h3>Resultados: Identificación de órganos</h3>
-		<section>
-		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
-				<div class="header-top">
-					<h2>Resultados:</h2>
-					<h2>Clasificador de órganos </h2> 
-
-					<div class="clearfix"> </div>
-				</div>
-			
-			<div id="result" style= "text-align: center" >
-			  <br >
-			  <br >
-			<figure id="preview40"><img src="uploads/zoom400VCFM6hjIJ.bmp" class="circular"/></figure>
-			<h2> Órgano: Branquias</h2>
-			</div>
-		<br>
-		<br>
-		<br>
-		<br>
-				
-		</div>
-		</section>
-
- -->
-
-
 
 
 
@@ -311,10 +274,13 @@
 		
 	</div>
 </div>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 @stop
 
 @section('scripts')
+
+
 <script>
  $("#ej").steps({
         headerTag: "h3",
@@ -357,6 +323,15 @@ var myChart = new Chart(ctx, {
     }
 });
 
+
+
+
+$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+
 	function onLoad(zoom) {
 			    console.log('on load inicia');
 		if(zoom == 4){
@@ -367,6 +342,9 @@ var myChart = new Chart(ctx, {
 		    document.getElementById('fileZoom40').click();
 	    }
 	}
+
+
+
 
 	function handleFiles(files, zoom) {
 	    var file = files[0];
@@ -381,6 +359,10 @@ var myChart = new Chart(ctx, {
 			    $('#preview4').html("");
 			    preview4.appendChild(img); 
 			    $('#zoom4').html(file.name);
+
+
+
+
 		    }else if(zoom == 10){
 		    	$('#preview10').html("");
 			    preview10.appendChild(img); 
@@ -394,18 +376,61 @@ var myChart = new Chart(ctx, {
 		    }
 
 
+
+		    /*
+					var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+					$.ajax({
+					    url: '/home/upload/',
+					    type: 'POST',
+					    data: {_token: CSRF_TOKEN},
+					    dataType: 'JSON',
+					    success: function (data) {
+					        console.log(data);
+					    }
+					});
+
+*/
+
 		    var reader = new FileReader();
 		    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
 		    reader.readAsDataURL(file);
+		    console.log(file);
 
+		    $("#fileZoom40_process").show();
+	    	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+	    	console.log("despues del csrf");
 		 	$.ajax({
 			url: "/clasificador_ajax",
 			type: "post",
-			data:{'fileZoom40': file},
+			processData: false, 
+			data:{'fileZoom40': file, 
+				'_token': CSRF_TOKEN
+				},
 			dataType: "html",
 			success: function(response){
+				if(zoom == 4){
+			   			$("#fileZoom40_process").hide();
+			$("#fileZoom4_result").html(response);
+			$("#fileZoom4_result").show();
 
+
+
+
+		    }else if(zoom == 10){
+		    				$("#fileZoom40_process").hide();
+			$("#fileZoom10_result").html(response);
+			$("#fileZoom10_result").show();
+
+		    }else if(zoom == 40){
+		    			$("#fileZoom40_process").hide();
 			$("#fileZoom40_result").html(response);
+			$("#fileZoom40_result").show();
+
+
+		    }
+
+
 			},
 			error: function(xhr, status){
 				alert("error");
