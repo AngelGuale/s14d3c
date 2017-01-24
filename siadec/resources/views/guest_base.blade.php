@@ -19,7 +19,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="{{ asset('/novus_admin/css/style.css') }}" rel='stylesheet' type='text/css' />
 <!-- font CSS -->
 <!-- font-awesome icons -->
-<link href="{{ asset('/novus_admin/css/font-awesome.css') }}" rel="stylesheet"> 
+<link href="{{ asset('/novus_admin/css/font-awesome.css') }}" rel="stylesheet">
+<link href="{{ asset('font-icons.css') }}" rel="stylesheet">
 <!-- //font-awesome icons -->
  <!-- js-->
 <script src="{{ asset('/novus_admin/js/jquery-1.11.1.min.js') }}"></script>

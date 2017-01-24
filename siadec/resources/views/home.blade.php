@@ -232,46 +232,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="stats-body">
 								<ul class="list-unstyled">
-									<li> IHHNV <span class="pull-right">35%</span>  
+									<li>WSSV <span class="pull-right">30%</span>  
 										<div class="progress progress-striped active progress-right">
-											<div style="width:35%;" class="bar red"></div> 
+											<div style="width:30%;" class="bar yellow"></div>
 										</div>
 									</li>
-									<li>HPV <span class="pull-right">15%</span>  
+									<li>Vibriosis <span class="pull-right">90%</span>  
 										<div class="progress progress-striped active progress-right">
-											<div style="width:15%;" class="bar yellow"></div>
+											<div style="width:90%;" class="bar blue"></div>
 										</div>
 									</li>
-									<li>WSSV <span class="pull-right">18%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:18%;" class="bar yellow"></div>
-										</div>
-									</li>
-									<li>TSV <span class="pull-right">5%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:5%;" class="bar blue"></div>
-										</div>
-									</li>
-									<li>YHV <span class="pull-right">2%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:2%;" class="bar green"></div>
-										</div>
-									</li>
-									<li>Vibriosis <span class="pull-right">10%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:10%;" class="bar blue"></div>
-										</div>
-									</li>
-									<li>NHP <span class="pull-right">25%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:25%;" class="bar red"></div>
-										</div>
-									</li>
-									<li class="last">Others <span class="pull-right">10%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:10%;" class="bar blue"></div>
-										</div>
-									</li> 
 								</ul>
 							</div>
 						</div>

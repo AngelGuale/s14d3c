@@ -85,91 +85,9 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-4">
-			<div class="col-md-12 widget-shadow" style="padding: 0; margin-bottom: 10px; background-color: #3b5998;">
-				<a href="http://www.cenaim.espol.edu.ec/">
-					<div class="wid-social twitter" style="background-color: #315384 !important;">
-						<div class="social-icon">
-							<i class="fa fa-sitemap text-light icon-xlg "></i>
-						</div>
-						<div class="social-info">
-							<h3 class="number_counter bold count text-light start_timer counted">CENAIM</h3>
-						</div>
-					</div>
-				</a>
-				<a href="https://www.youtube.com/watch?v=fvSiQlWGQ5Q">
-					<div class="wid-social google-plus">
-						<div class="social-icon">
-							<i class="fa fa-youtube text-light icon-xlg "></i>
-						</div>
-						<div class="social-info">
-							<h3 class="number_counter bold count text-light start_timer counted">Video</h3>
-						</div>
-					</div>
-				</a>
-				<a href="https://www.facebook.com/pages/Cenaim-Espol-San-Pedro-de-Manglaralto/205765719550510">
-					<div class="wid-social facebook">
-						<div class="social-icon">
-							<i class="fa fa-facebook text-light icon-xlg "></i>
-						</div>
-						<div class="social-info">
-							<h3 class="number_counter bold count text-light start_timer counted">Like</h3>
-						</div>
-					</div>
-				</a>
-				<div class="clearfix"> </div>
-		</div>
-			<div class="col-md-12 stats-info widget-shadow">
-				<div class="stats-title">
-					<h4 class="title">Enfermedades Detectadas en los Ex&aacute;menes m&aacute;s recientes</h4>
-				</div>
-				<div class="stats-body">
-					<ul class="list-unstyled">
-						<li> IHHNV <span class="pull-right">35%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:35%;" class="bar red"></div> 
-							</div>
-						</li>
-						<li>HPV <span class="pull-right">15%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:15%;" class="bar yellow"></div>
-							</div>
-						</li>
-						<li>WSSV <span class="pull-right">18%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:18%;" class="bar yellow"></div>
-							</div>
-						</li>
-						<li>TSV <span class="pull-right">5%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:5%;" class="bar blue"></div>
-							</div>
-						</li>
-						<li>YHV <span class="pull-right">2%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:2%;" class="bar green"></div>
-							</div>
-						</li>
-						<li>Vibriosis <span class="pull-right">10%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:10%;" class="bar blue"></div>
-							</div>
-						</li>
-						<li>NHP <span class="pull-right">25%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:25%;" class="bar red"></div>
-							</div>
-						</li>
-						<li class="last">Others <span class="pull-right">10%</span>  
-							<div class="progress progress-striped active progress-right">
-								<div style="width:10%;" class="bar blue"></div>
-							</div>
-						</li> 
-					</ul>
-				</div>
-			</div>
-
-		</div>
+		<?php
+		include(app_path()."/statistics.php");
+		?>
 	</div>
 </div>
 @stop
