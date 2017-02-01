@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>SIADEC | Servicio de Identificación Automática de Enfermedades del Camarón</title>
+<title>SIADEC | Automatic Identification of Shrimp disease Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -20,6 +20,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- font CSS -->
 <!-- font-awesome icons -->
 <link href="{{ asset('/novus_admin/css/font-awesome.css') }}" rel="stylesheet"> 
+<link href="{{ asset('font-icons.css') }}" rel="stylesheet">
 <!-- //font-awesome icons -->
  <!-- js-->
 <script src="{{ asset('/novus_admin/js/jquery-1.11.1.min.js') }}"></script>
@@ -77,10 +78,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open col-sm-3 col-md-3 col-lg-3" id="cbp-spmenu-s1">
 					<ul class="nav" id="side-menu">
 						<li>
-							<a href="/home"><i class="fa fa-home nav_icon"></i>Inicio</a>
+							<a href="/home"><i class="fa fa-home nav_icon"></i>Home</a>
 						</li>
 						<li>
-							<a href="/clasificador"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
+							<a href="/clasificador"><i class="fa fa-eye nav_icon"></i>Analysis</a>
 							<!-- /nav-second-level -->
 						</li>
 						<!-- <li>
@@ -88,7 +89,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							
 						</li>
 						 --><li>
-							<a href="/analyzeLog"><i class="fa fa-th-list nav_icon"></i>Historial</a>
+							<a href="/analyzeLog"><i class="fa fa-th-list nav_icon"></i>History</a>
 							<!-- /nav-second-level -->
 						</li>
 						
@@ -111,7 +112,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="logo col-sm-2 col-md-2 col-lg-2" id="logoPlacement">
 					<a href="/home">
 						<h1>SIADEC</h1>
-						<span>Administrador</span>
+						<span>Admin</span>
 					</a>
 				</div>
 				<!--//logo-->
@@ -129,7 +130,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<div class="profile_img">	
 									<div class="user-name">
 										<p>{{ $name }}</p>
-										<span>Administrador</span>
+										<span>Admin</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>
@@ -152,7 +153,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; Sistema Desarrollado por <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
+		   <p>&copy; Developed by <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
 		</div>
         <!--//footer-->
 	</div>

@@ -7,8 +7,8 @@
 			<!--<form  method="post" action="/clasificador" enctype="multipart/form-data">-->
 			<form  method="post" action="/clasificador" enctype="multipart/form-data">
 				<div class="header-top">
-					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio:</h2>
-					<h2>Análisis de presencia de Virus </h2> 
+					<h2>Microscope Picture Analysis:</h2>
+					<h2>Presence of a Virus Analysis </h2> 
 
 					<div class="clearfix"> </div>
 				</div>
@@ -28,12 +28,12 @@
 							</a>
 							<br/>
 							<div class="bottom-head">
-								<label id="zoom40">Seleccione una Imagen</label>
+								<label id="zoom40">Choose a Picture</label>
 							</div>
 						</div>
 					</div>
 				</div>
-				<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analizar"></input>
+				<input class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;" value="Analyze"></input>
 			</form>
 		<div id="result" style= "text-align: center" >
 		@if(isset($imagen))

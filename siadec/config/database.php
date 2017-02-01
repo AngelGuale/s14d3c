@@ -58,7 +58,7 @@ return [
 			'port'	    => '3306',
 			'database'  => 'siadec',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

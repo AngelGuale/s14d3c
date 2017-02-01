@@ -56,7 +56,7 @@
 			map: map,
 			draggable:false,
 			animation: google.maps.Animation.DROP,
-			title:"Seleccione la ubicacion de su cultivo",
+			title:"Select your location",
 		});
 
 		google.maps.event.addListener(marker, 'dragend', function (evt) {

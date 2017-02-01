@@ -7,54 +7,54 @@
 			<form enctype="multipart/form-data"  method="post" action="/analisisMicroscopio">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}"/>
 				<div class="header-top">
-					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio</h2>
+					<h2>Microscope Picture Analysis</h2>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="header-bottom">
 					<div class ="form-body">
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="responsable">Responsable: </label> 
+								<label class="col-sm-2 control-label" for="responsable">Responsible: </label> 
 								<div class="col-sm-4"> 
-									<input type="text" placeholder="Nombre y Apellido" id="responsable" name="responsable" class="form-control" required> 
+									<input type="text" placeholder="Name" id="responsable" name="responsable" class="form-control" required> 
 								</div> 
-								<label class="col-sm-2 control-label" for="codigo">C&oacute;digo: </label> 
+								<label class="col-sm-2 control-label" for="codigo">Code: </label> 
 								<div class="col-sm-4"> 
-									<input type="text" placeholder="Codigo de Examen" id="codigo" name="codigo" class="form-control" required> 
+									<input type="text" placeholder="Examn Code" id="codigo" name="codigo" class="form-control" required> 
 								</div> 
 								
 							</div>
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="codigo">FechaImagenes: </label> 
+								<label class="col-sm-2 control-label" for="codigo">PictureDate: </label> 
 								<div class="col-sm-4"> 
 									<input type="date" placeholder="12/12/1990" id="fecha" name="fecha" class="form-control" required> 
 								</div>
-								<label class="col-sm-2 control-label" for="empresa">Empresa: </label> 
+								<label class="col-sm-2 control-label" for="empresa">Company: </label> 
 								<div class="col-sm-4"> 
-									<input type="text" placeholder="Empresa" id="empresa" name="empresa" class="form-control" required> 
+									<input type="text" placeholder="Company" id="empresa" name="empresa" class="form-control" required> 
 								</div> 
 							</div>
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="equipos">EquiposUsados: </label> 
+								<label class="col-sm-2 control-label" for="equipos">Equipment: </label> 
 								<div class="col-sm-10"> 
-									<input type="text" placeholder="Equipos usados en la captura de las imagenes" id="equipos" name="equipos" class="form-control" required> 
+									<input type="text" placeholder="Equipment used for image capture" id="equipos" name="equipos" class="form-control" required> 
 								</div> 											
 							</div>
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="observaciones">Observaciones: </label> 
+								<label class="col-sm-2 control-label" for="observaciones">Observation: </label> 
 								<div class="col-sm-10"> 
-									<input type="text" placeholder="Observaciones" id="observaciones" name="observaciones" class="form-control" required> 
+									<input type="text" placeholder="Observations" id="observaciones" name="observaciones" class="form-control" required> 
 								</div> 											
 							</div>
 						</div>
 						<div class="form-horizontal">
-							<label class="col-sm-12" for="location">Arrastre el mapa para colocar el marcador sobre la ubicaci&oacute;n de su cultivo: </label> 
+							<label class="col-sm-12" for="location">Trace a mark in map to place your cultivation's geographic location: </label> 
 							<input type="text" id="location" name="location" style="display: none;" required> 
 							<div class="form-group"> 
 								<div id="googleMap" style="width:100%;height:380px;"></div>										
@@ -73,7 +73,7 @@
 							</a>
 							<br/>
 							<div class="bottom-head">
-								<label id="zoom4">Seleccione una Imagen</label>
+								<label id="zoom4">Choose a Picture</label>
 							</div>
 						</div>
 					</div>
@@ -86,7 +86,7 @@
 							</a>
 							<br/>
 							<div class="bottom-head">
-								<label id="zoom10">Seleccione una Imagen</label>
+								<label id="zoom10">Choose a Picture</label>
 							</div>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 							</a>
 							<br/>
 							<div class="bottom-head">
-								<label id="zoom40">Seleccione una Imagen</label>
+								<label id="zoom40">Choose a Picture</label>
 							</div>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 					<div class="clearfix"> </div>
 				</div>
 
-				<button class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;">Analizar</button>
+				<button class="btn btn-warning btn-lg btn-block" type="submit" style="border: none; border-radius: 0px;">Analyze</button>
 			</form>
 			<script>
 				 var icons = new Skycons({"color": "#fff"}),

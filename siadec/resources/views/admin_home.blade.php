@@ -4,7 +4,7 @@
 <div class="main-page">
 	<div class="container">
 		<div class="col-md-8 col-offset-md-1 widget-shadow" style="padding: 0;">
-			<h4 class="title3" style="background-color: #315384; color: #fff;">Servicio de Identificación Automática de Enfermedades del Camarón</h4>
+			<h4 class="title3" style="background-color: #315384; color: #fff;">SIADEC | Automatic Identification of Shrimp disease Service</h4>
 			<div id="tabContent" class="tab-content">
 				<div class="tab-pane fade active in" id="cultiva">
 					<div id="bannerCultiva" class="profile-top" style='background-position: center; background-image: url({{ asset("camarones_bg0.jpg") }}); background-size: 100%; background-repeat: no-repeat; height: 400px;'>
@@ -16,10 +16,8 @@
 								<i class="fa fa-warning profile-icon" style="font-size: 2em;"></i>
 							</div>
 							<div class="profile-right">
-								<h4>Importante tomar en cuenta</h4>
-								<p>Los camarones son propensos a enfermedades causadas por representantes de casi todos los grupos 
-								de agentes infecciosos conocidos y estas enfermedades son la causa de p&eacute;rdidas econ&oacute;micas cuantiosas 
-								en la producci&oacute;n de los camarones, sobre todo a su temprana edad.</p>
+								<h4>Keep in mind</h4>
+								<p>Shrimps are prone to diseases cause of known infectious agents, this disease are the reason of significant economic losses in shrimps production, especially at early age.</p>
 							</div> 
 							<div class="clearfix"> </div>	
 						</div>
@@ -34,10 +32,8 @@
 								<i class="fa fa-check profile-icon" style="font-size: 2em;"></i>
 							</div>
 							<div class="profile-right">
-								<h4>Ten un chequeo peri&oacute;dico de tu producto</h4>
-								<p>SIADEC est&aacute; desarrollado con la finalidad de poder detectar m&uacute;ltiples enfermedades
-								del camar&oacute;n de manera sencilla y eficaz al alcance del usuario. De esta forma
-								ud. podr&aacute; tener un control regular de su producto y podr&aacute; eliminar o prevenir enfermedades al instante.</p>
+								<h4>Have a periodic check with your product</h4>
+								<p>SIADEC is a tool that helps users to detect numerous disease that affects the shrimps on an easy and effective way. Will lend you steady control over your product and help you remove or prevent sickness.</p>
 							</div> 
 							<div class="clearfix"> </div>	
 						</div>
@@ -52,12 +48,8 @@
 								<i class="fa fa-comments-o profile-icon" style="font-size: 2em;"></i>
 							</div>
 							<div class="profile-right">
-								<h4>El camar&oacute;n en el Ecuador</h4>
-								<p>Es un alimento que presenta un nivel muy bajo de grasas y calorías. El camarón es rico en componentes como carotenos, 
-								beta carotenos, omega 3 y pre vitamina A. El camarón ecuatoriano por su exquisito sabor, color y textura es reconocido 
-								como un producto gourmet a nivel mundial.
-								Las ventajas climáticas del país permiten que se generen hasta tres ciclos de cosechas por año, y un mayor desarrollo productivo por hectárea. 
-								El camarón blanco o litopenaeus vannamei representa más del 95% de la producción ecuatoriana
+								<h4>Ecuadorean Shrimp</h4>
+								<p>Shrimp are low fat and calories, have a good source of carotene, beta carotene, omega 3 and vitamin A. Ecuadorean shrimp has a delicious taste, good color and texture; Is known as a globally gourmet product. Weather benefits shrimps growth, allowing up to 3 harvests per year. Whiteleg shrimp or Litopenaeus Vannamei, represents 95% of Ecuadorean production.
 								</p>
 							</div> 
 							<div class="clearfix"> </div>	
@@ -69,17 +61,17 @@
 				<ul>
 					<li class="tabSelector active">
 						<a href="#cultiva" data-toggle="tab">
-							<h4>Cultiva</h4>
+							<h4>Farm</h4>
 						</a>
 					</li>
 					<li class="tabSelector">
 						<a href="#chequea" data-toggle="tab">
-							<h4>Chequea</h4>
+							<h4>Diagnostic</h4>
 						</a>
 					</li>
 					<li class="tabSelector">
 						<a href="#disfruta" data-toggle="tab">
-							<h4>Disfruta</h4>
+							<h4>Provide</h4>
 						</a>
 					</li>
 				</ul>
