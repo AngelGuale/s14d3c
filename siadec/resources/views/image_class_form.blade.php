@@ -23,23 +23,26 @@
 					<div class ="form-body">
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="responsable">Responsable: </label> 
+								<label class="col-sm-2 control-label" for="responsable">Responsable:  </label> 
 								<div class="col-sm-4"> 
-									<input type="text" placeholder="Nombre y Apellido" id="responsable" name="responsable" class="form-control" required> 
-								</div> 
-							
-								
+									<div > 
+									<a href="#" id="responsable" data-type="text" data-name="responsable" class="input_editable">{{$examen->responsable}}</a>
+									<!-- <input type="text" placeholder="Nombre y Apellido" id="responsable" name="responsable" class="form-control" value="{{$examen->responsable}}" required>  -->
+									</div> 
+								</div> 					
 							</div>
 						</div>
 						<div class="form-horizontal">
-							<div class="form-group"> 
+							<div class="form-group">
 								<label class="col-sm-2 control-label" for="codigo">FechaImagenes: </label> 
 								<div class="col-sm-4"> 
-									<input type="date" placeholder="12/12/1990" id="fecha" name="fecha" class="form-control" required> 
+									<a href="#" id="responsable" class="input_editable" data-type="date" data-name="fecha">{{$examen->fecha}}</a>
+									<!-- <input type="date" value="{{$examen->fecha}}" id="fecha" name="fecha" class="form-control" required>  -->
 								</div>
 								<label class="col-sm-2 control-label" for="empresa">Empresa: </label> 
 								<div class="col-sm-4"> 
-									<input type="text" placeholder="Empresa" id="empresa" name="empresa" class="form-control" required> 
+								<a href="#" id="empresa" class="input_editable" data-type="text" data-name="">{{$examen->empresa}}</a>
+								<!-- 	<input type="text" value="{{$examen->empresa}}"placeholder="Empresa" id="empresa" name="empresa" class="form-control" required>  -->
 								</div> 
 							</div>
 						</div>
@@ -47,7 +50,8 @@
 							<div class="form-group"> 
 								<label class="col-sm-2 control-label" for="equipos">EquiposUsados: </label> 
 								<div class="col-sm-10"> 
-									<input type="text" placeholder="Equipos usados en la captura de las imagenes" id="equipos" name="equipos" class="form-control" required> 
+									<!-- <input type="text" value="{{$examen->equipos}}" placeholder="Equipos usados en la captura de las imagenes" id="equipos" name="equipos" class="form-control" required> 
+									 --><a href="#" id="empresa" class="input_editable" data-type="textarea" data-pk="{{$examen->id}}" data-name="equipos">{{$examen->equipos}}</a>
 								</div> 											
 							</div>
 						</div>
@@ -55,7 +59,8 @@
 							<div class="form-group"> 
 								<label class="col-sm-2 control-label" for="observaciones">Observaciones: </label> 
 								<div class="col-sm-10"> 
-									<input type="text" placeholder="Observaciones" id="observaciones" name="observaciones" class="form-control" required> 
+									<!-- <input type="text" value="{{$examen->observaciones}}" placeholder="Observaciones" id="observaciones" name="observaciones" class="form-control" required>  -->
+									<a href="#" id="observaciones" class="input_editable" data-type="textarea" data-pk="{{$examen->id}}" data-name="observaciones">{{$examen->observaciones}}</a>
 								</div> 											
 							</div>
 						</div>
@@ -107,7 +112,7 @@
 				</div>
 			
 			  <table id="clasificador_tabla" class="table table-striped table-bordered" width="80%">
-			  <style type="text/css">
+			<style type="text/css">
 			  	.loader {
 					  border: 16px solid #f3f3f3;
 					  border-radius: 50%;
@@ -128,7 +133,7 @@
 					  0% { transform: rotate(0deg); }
 					  100% { transform: rotate(360deg); }
 					}
-			  </style>
+			</style>
 			  	<thead >
 			  		<th >
 			  			Ingrese imagen en zoom: 40x
@@ -282,6 +287,17 @@
 
 
 <script>
+$.fn.editable.defaults.mode = 'inline';
+$(document).ready(function() {
+    $('.input_editable').editable({
+    	url: '/actualizar_datos',
+    	title: 'Enter username',
+    	success:function(response, newValue){
+    		console.log(response);
+    		console.log(newValue);
+    	}});
+});
+
  $("#ej").steps({
         headerTag: "h3",
         bodyTag: "section",

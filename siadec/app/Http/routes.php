@@ -32,12 +32,16 @@ Route::post('/analisisMicroscopio', 'WelcomeController@analisisMicroscopio');
 
 Route::get('/analyzeLog', 'WelcomeController@analyzeLog');
 
-Route::get('/clasificador', 'WelcomeController@clasificadorForm');
+Route::get('/clasificador/{id_examen}', 'WelcomeController@clasificadorForm');
 
 Route::post('/clasificador', 'WelcomeController@clasificador');
 Route::get('/identificador_virus', 'WelcomeController@identificadorVirusForm');
 Route::post('/identificador_virus', 'WelcomeController@identificadorVirus');
+Route::get('/ver_historial', 'WelcomeController@ver_historial');
+Route::get('/new_analisis', 'WelcomeController@new_analisis');
+Route::post('/actualizar_datos', 'WelcomeController@actualizar_datos');
 
+Route::get('/crear_examen', 'WelcomeController@crear_examen');
 
 Route::resource('/clasificador_ajax', 'WelcomeController@clasificador_ajax');
 

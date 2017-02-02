@@ -55,6 +55,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="{{ asset('/jquery-steps-master/demo/css/jquery.steps.css') }}" rel="stylesheet">
 <script src="{{ asset('/node_modules/chart.js/dist/Chart.bundle.js') }}"></script>
 
+   <script src="{{ asset('/novus_admin/js/bootstrap.js') }}"> </script>
+<link href="{{ asset('/bootstrap3-editable-1.5.1/bootstrap3-editable/css/bootstrap-editable.css') }}" rel="stylesheet">
+<script src="{{ asset('/bootstrap3-editable-1.5.1/bootstrap3-editable/js/bootstrap-editable.js') }}"></script>
+
 
 <style>
 	.circular {
@@ -80,7 +84,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<a href="/home"><i class="fa fa-home nav_icon"></i>Inicio</a>
 						</li>
 						<li>
-							<a href="/clasificador"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
+							<a href="/new_analisis"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
 							<!-- /nav-second-level -->
 						</li>
 						<!-- <li>
@@ -182,6 +186,5 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 	<!--//scrolling js-->
 	<!-- Bootstrap Core JavaScript -->
-   <script src="{{ asset('/novus_admin/js/bootstrap.js') }}"> </script>
 </body>
 </html>

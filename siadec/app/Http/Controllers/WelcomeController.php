@@ -63,16 +63,58 @@ class WelcomeController extends Controller {
 		return view('analyze')->with($args);
 	}
 
-public function clasificadorForm()
+public function clasificadorForm($id_examen)
 	{
 		if (!Session::get('user_id')){
 			return Redirect::to('/home');
 		}
 		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$dbExamen=Examen::where('id', $id_examen)->first();
 	 	$args= array(
-	 		'name' => $dbUser->nombre
+	 		'name' => $dbUser->nombre,
+	 		'examen'=> $dbExamen
         );
 		return view('image_class_form')->with($args);
+	}
+
+	public function actualizar_datos(Request $request){
+		$pk=$request->get('pk');
+		$name=$request->get('name');
+		$value=$request->get('value');
+		error_log("hola actualizar");
+		$dbExamen=Examen::where('id', $pk)->first();
+		
+		switch ($name) {
+			case 'equipos':
+				# code...
+				$dbExamen->equipos=$value;
+				$dbExamen->save();
+				break;
+			case 'observaciones':
+				# code...
+				$dbExamen->observaciones=$value;
+				$dbExamen->save();
+				break;
+			default:
+				# code...
+				break;
+		}
+		return "ok";
+
+	}
+	public function crear_examen(){
+		error_log("hola crear examen");
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$dbExamen= new Examen();
+	 	$dbExamen->user_id=$dbUser->id;
+	 	$dbExamen->codigo="123";
+			$dbExamen->save();
+			return Redirect::to('/clasificador'.'/'.$dbExamen->id);
+
+
 	}
 	public function identificadorVirusForm()
 	{
@@ -85,6 +127,23 @@ public function clasificadorForm()
         );
 		return view('identificador_virus')->with($args);
 	}
+	/*
+
+	public function ver_historial(){
+		if (!Session::get('user_id')){
+			return Redirect::to('/home');
+		}
+
+		$examenes=Examen::where('user_id', Session::get('user_id'));
+		error_log('hola');
+		error_log(count($examenes));
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre,
+	 		'examenes' => $examenes
+        );
+	 	return view('ver_historial')->with($args);
+	}*/
 
 
 public function analisisMicroscopio(Request $request){
@@ -323,6 +382,16 @@ public function clasificador(){
 
 
 
+	public function new_analisis(){
+
+		$dbUser = User::where('id', Session::get('user_id'))->first();
+	 	$args= array(
+	 		'name' => $dbUser->nombre
+        );
+
+		
+		return view('new_analisis')->with($args);
+	}
 
 	public function analyzeLog(){
 

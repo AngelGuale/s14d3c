@@ -9,7 +9,7 @@
 					<tr> 
 						<th>#</th> 
 						<th>C&oacute;digo</th> 
-						<th>Fecha Del Examen</th> 
+						<th>Fecha </th> 
 						<th>Responsable</th> 
 						<th>Resultados</th>
 						<th>Detalle</th>
@@ -23,7 +23,7 @@
 						<td>{{$examen->fecha}}</td> 
 						<td>{{$examen->responsable}}</td> 
 						<td style="color : green;">No se detectaron enfermedades!</td> 
-						<td><button class="btn btn-info btn-xs btn-block" style="border: none; border-radius: 0px;">Ver</button></td>
+						<td><button class="btn btn-info btn-xs btn-block" onclick="location.href='/clasificador/{{$examen->id}}'" style="border: none; border-radius: 0px;">Ver</button></td>
 					</tr> 
 					@endforeach
 				</tbody> 
