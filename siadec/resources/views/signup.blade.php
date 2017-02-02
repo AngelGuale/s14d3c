@@ -12,15 +12,15 @@
 	}
 </style>
 	<div class="main-page signup-page">
-		<h3 class="title1">Formulario de Registro</h3>
-		<p class="creating">Por medio de este registro podr&aacute; acceder a los beneficios que SIADEC ha preparado para usted</p>
+		<h3 class="title1"> Signup Form</h3>
+		<p class="creating">Signup for SIADEC benefits </p>
 		<form method="POST" action="/register">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 			<div class="sign-up-row widget-shadow">
-				<h5>Informaci&oacute;n de su Cuenta :</h5>
+				<h5>Account Information:</h5>
 				<div class="sign-u">
 					<div class="sign-up1">
-						<h4>Nombres* :</h4>
+						<h4>Name* :</h4>
 					</div>
 					<div class="sign-up2">
 						<input name="name" id="name" type="text"  required>
@@ -29,7 +29,7 @@
 				</div>
 				<div class="sign-u">
 					<div class="sign-up1">
-						<h4>Apellidos* :</h4>
+						<h4>Surname* :</h4>
 					</div>
 					<div class="sign-up2">
 						<input name="lastname" id="lastname" type="text" required>
@@ -47,7 +47,7 @@
 				</div>
 				<div class="sign-u">
 					<div class="sign-up1">
-						<h4>Contrase&ntilde;a*:</h4>
+						<h4>Password*:</h4>
 					</div>
 					<div class="sign-up2">
 						<input name="pass" type="password" required>
@@ -56,7 +56,7 @@
 				</div>
 				<div class="sign-u">
 					<div class="sign-up1">
-						<h4>Confirmar Contrase&ntilde;a* :</h4>
+						<h4>Confirm Password* :</h4>
 					</div>
 					<div class="sign-up2">
 						<input name="repeat_pass" type="password" required>
@@ -64,7 +64,7 @@
 					<div class="clearfix"> </div>
 				</div>
 				<div class="sub_home">
-					<input type="submit" value="Enviar solicitud de registro" style="left:50%">
+					<input type="submit" value="Send Signup form" style="left:50%">
 					<div class="clearfix"> </div>
 				</div>
 			</div>

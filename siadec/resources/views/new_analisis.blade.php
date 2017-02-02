@@ -17,7 +17,7 @@ width: 90px;
 
 	<div class="tables col-md-8 col-md-offset-2">
 		<div class="bs-example widget-shadow" data-example-id="hoverable-table"> 
-			<h4 class="center">Crear Análisis</h4>
+			<h4 class="center">Create Analysis</h4>
 		<div class="center">
   		<span class="input-group-btn ">
               <button type="button" onclick="location.href='/crear_examen'" class="btn btn-success " data-type="plus" data-field="">

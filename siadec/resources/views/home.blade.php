@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>SIADEC | Servicio de Identificación Automática de Enfermedades del Camarón</title>
+<title>SIADEC | Automatic Identification of Shrimp disease Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -67,10 +67,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<ul class="nav" id="side-menu">
 						<li>
-							<a href="/home" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
+							<a href="/home" class="active"><i class="fa fa-home nav_icon"></i>Home</a>
 						</li>
 						<li>
-							<a href="/analisisMicroscopio"><i class="fa fa-eye nav_icon"></i>An&aacute;lisis</a>
+							<a href="/analisisMicroscopio"><i class="fa fa-eye nav_icon"></i>Analysis</a>
 							<!-- /nav-second-level -->
 						</li>
 						
@@ -91,7 +91,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="logo">
 					<a href="/home">
 						<h1>SIADEC</h1>
-						<span>Administrador</span>
+						<span>Admin</span>
 					</a>
 				</div>
 				<!--//logo-->
@@ -109,7 +109,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<div class="profile_img">	
 									<div class="user-name">
 										<p>Pedro</p>
-										<span>Administrator</span>
+										<span>Admin</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>
@@ -133,7 +133,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="main-page">
 				<div class="container">
 					<div class="col-md-8 col-offset-md-1 widget-shadow" style="padding: 0;">
-						<h4 class="title3" style="background-color: #315384; color: #fff;">Servicio de Identificación Automática de Enfermedades del Camarón</h4>
+						<h4 class="title3" style="background-color: #315384; color: #fff;">Automatic Identification of Shrimp Sickness Service</h4>
 						<div id="banner" class="profile-top" style='background-position: center; background-image: url({{ asset("camarones_bg0.jpg") }}); background-size: 100%; background-repeat: no-repeat; height: 400px;'>
 
 						</div>
@@ -143,10 +143,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-check profile-icon" style="font-size: 2em;"></i>
 								</div>
 								<div class="profile-right">
-									<h4>Ten un chequeo peri&oacute;dico de tu producto</h4>
-									<p>SIADEC esta desarrollado con la finalidad de poder detectar multiples enfermedades
-									del camar&oacute;n de manera sencilla y eficaz al alcance del usuario. De esta forma
-									ud. podr&aacute; tener un control regular de su producto y podr&aacute; eliminar o prevenir enfermedades al instante.</p>
+									<h4>Have a periodic check with your product</h4>
+									<p>SIADEC is a tool that helps users to detect numerous disease that affects the shrimps on an easy and effective way. Will lend you steady control over your product and help you remove or prevent sickness.</p>
 								</div> 
 								<div class="clearfix"> </div>	
 							</div>
@@ -155,10 +153,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-warning profile-icon" style="font-size: 2em;"></i>
 								</div>
 								<div class="profile-right">
-									<h4>Importante tomar en cuenta</h4>
-									<p>Los camarones son propensos a enfermedades causadas por representantes de casi todos los grupos 
-									de agentes infecciosos conocidos y estas enfermedades son la causa de pérdidas económicas cuantiosas 
-									en la producción de los camarones, sobre todo a su temprana edad.</p>
+									<h4>Keep in mind</h4>
+									<p>Shrimps are prone to diseases cause of known infectious agents, this disease are the reason of significant economic losses in shrimps production, especially at early age.</p>
 								</div> 
 								<div class="clearfix"> </div>	
 							</div>
@@ -167,12 +163,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-comments-o profile-icon" style="font-size: 2em;"></i>
 								</div>
 								<div class="profile-right">
-									<h4>El camar&oacute;n en el Ecuador</h4>
-									<p>Es un alimento que presenta un nivel muy bajo de grasas y calorías. El camarón es rico en componentes como carotenos, 
-									beta carotenos, omega 3 y pre vitamina A. El camarón ecuatoriano por su exquisito sabor, color y textura es reconocido 
-									como un producto gourmet a nivel mundial.
-									Las ventajas climáticas del país permiten que se generen hasta tres ciclos de cosechas por año, y un mayor desarrollo productivo por hectárea. 
-									El camarón blanco o litopenaeus vannamei representa más del 95% de la producción ecuatoriana
+									<h4>Ecuadorean Shrimp</h4>
+									<p>Shrimp are low fat and calories, have a good source of carotene, beta carotene, omega 3 and vitamin A. Ecuadorean shrimp has a delicious taste, good color and texture; Is known as a globally gourmet product. Weather benefits shrimps growth, allowing up to 3 harvests per year. Whiteleg shrimp or Litopenaeus Vannamei, represents 95% of Ecuadorean production.
 									</p>
 								</div> 
 								<div class="clearfix"> </div>	
@@ -181,13 +173,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<div class="profile-btm">
 							<ul>
 								<li>
-									<h4>Cultiva</h4>
+									<h4>Farm</h4>
 								</li>
 								<li>
-									<h4>Chequea</h4>
+									<h4>Diagnostic</h4>
 								</li>
 								<li>
-									<h4>Disfruta</h4>
+									<h4>Provide</h4>
 								</li>
 							</ul>
 						</div>
@@ -195,83 +187,54 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-4">
 						<div class="col-md-12 widget-shadow" style="padding: 0; margin-bottom: 10px; background-color: #3b5998;">
 							<a href="http://www.cenaim.espol.edu.ec/">
-								<div class="wid-social twitter" style="background-color: #315384 !important;">
-									<div class="social-icon">
-										<i class="fa fa-sitemap text-light icon-xlg "></i>
-									</div>
-									<div class="social-info">
-										<h3 class="number_counter bold count text-light start_timer counted">CENAIM</h3>
-									</div>
-								</div>
-							</a>
-							<a href="https://www.youtube.com/watch?v=fvSiQlWGQ5Q">
-								<div class="wid-social google-plus">
-									<div class="social-icon">
-										<i class="fa fa-youtube text-light icon-xlg "></i>
-									</div>
-									<div class="social-info">
-										<h3 class="number_counter bold count text-light start_timer counted">Video</h3>
-									</div>
-								</div>
-							</a>
-							<a href="https://www.facebook.com/pages/Cenaim-Espol-San-Pedro-de-Manglaralto/205765719550510">
-								<div class="wid-social facebook">
-									<div class="social-icon">
-										<i class="fa fa-facebook text-light icon-xlg "></i>
-									</div>
-									<div class="social-info">
-										<h3 class="number_counter bold count text-light start_timer counted">Like</h3>
-									</div>
-								</div>
-							</a>
+					<div class="wid-social twitter" style="background-color: #315384 !important;">
+						<div class="social-icon">
+							<i class="icon-cenaim text-light icon-xlg "></i>
+						</div>
+						<div class="social-info">
+							<h3 class="number_counter bold count text-light start_timer counted">CENAIM</h3>
+						</div>
+					</div>
+				</a>
+				<a href="http://www.cidis.espol.edu.ec/">
+					<div class="wid-social google-plus">
+						<div class="social-icon">
+							<span class="icon-cidis text-light icon-xlg" style="margin-left:-10px">              
+                			</span>
+						</div>
+						<div class="social-info">
+							<h3 class="number_counter bold count text-light start_timer counted">CIDIS</h3>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.facebook.com/pages/Cenaim-Espol-San-Pedro-de-Manglaralto/205765719550510">
+					<div class="wid-social facebook">
+						<div class="social-icon">
+							<i class="fa fa-link text-light icon-xlg " style="font-family:FontAwesome!important;"></i>
+						</div>
+						<div class="social-info">
+							<h3 class="number_counter bold count text-light start_timer counted">PROJECT</h3>
+						</div>
+					</div>
+				</a>
 							<div class="clearfix"> </div>
 					</div>
 						<div class="col-md-12 stats-info widget-shadow">
 							<div class="stats-title">
-								<h4 class="title">Enfermedades Detectadas en los Ex&aacute;menes m&aacute;s recientes</h4>
+								<h4 class="title">Recent Illness Detected by Test</h4>
 							</div>
 							<div class="stats-body">
 								<ul class="list-unstyled">
-									<li> IHHNV <span class="pull-right">35%</span>  
+									<li>WSSV <span class="pull-right">30%</span>  
 										<div class="progress progress-striped active progress-right">
-											<div style="width:35%;" class="bar red"></div> 
+											<div style="width:30%;" class="bar yellow"></div>
 										</div>
 									</li>
-									<li>HPV <span class="pull-right">15%</span>  
+									<li>Vibriosis <span class="pull-right">90%</span>  
 										<div class="progress progress-striped active progress-right">
-											<div style="width:15%;" class="bar yellow"></div>
+											<div style="width:90%;" class="bar blue"></div>
 										</div>
 									</li>
-									<li>WSSV <span class="pull-right">18%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:18%;" class="bar yellow"></div>
-										</div>
-									</li>
-									<li>TSV <span class="pull-right">5%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:5%;" class="bar blue"></div>
-										</div>
-									</li>
-									<li>YHV <span class="pull-right">2%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:2%;" class="bar green"></div>
-										</div>
-									</li>
-									<li>Vibriosis <span class="pull-right">10%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:10%;" class="bar blue"></div>
-										</div>
-									</li>
-									<li>NHP <span class="pull-right">25%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:25%;" class="bar red"></div>
-										</div>
-									</li>
-									<li class="last">Others <span class="pull-right">10%</span>  
-										<div class="progress progress-striped active progress-right">
-											<div style="width:10%;" class="bar blue"></div>
-										</div>
-									</li> 
 								</ul>
 							</div>
 						</div>
@@ -282,7 +245,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; Sistema Desarrollado por <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
+		   <p>&copy; Developed by <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
 		</div>
         <!--//footer-->
 	</div>

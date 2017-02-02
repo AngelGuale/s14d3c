@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>SIADEC | Servicio de Identificación Automática de Enfermedades del Camarón</title>
+<title>SIADEC | Automatic Identification of Shrimp disease Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -19,7 +19,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="{{ asset('/novus_admin/css/style.css') }}" rel='stylesheet' type='text/css' />
 <!-- font CSS -->
 <!-- font-awesome icons -->
-<link href="{{ asset('/novus_admin/css/font-awesome.css') }}" rel="stylesheet"> 
+<link href="{{ asset('/novus_admin/css/font-awesome.css') }}" rel="stylesheet">
+<link href="{{ asset('font-icons.css') }}" rel="stylesheet">
 <!-- //font-awesome icons -->
  <!-- js-->
 <script src="{{ asset('/novus_admin/js/jquery-1.11.1.min.js') }}"></script>
@@ -68,39 +69,35 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <body class="cbp-spmenu-push">
 	<div class="main-content">
 		<!--left-fixed -navigation-->
-		<div class=" sidebar" role="navigation">
+		 <!-- <div class=" sidebar" role="navigation">
             <div class="navbar-collapse">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1">
 					<ul class="nav" id="side-menu">
 						<li>
-							<a href="/"><i class="fa fa-home nav_icon"></i>Inicio</a>
-						</li>
+							<a href="/"><i class="fa fa-home nav_icon"></i>Home</a>
+						</li> -->
 						<!--<li>
 							<a href="/login"><i class="fa fa-user nav_icon"></i>Iniciar Sesion</a>
 						</li>
 						<li>
 							<a href="/signup"><i class="fa fa-file-o nav_icon"></i>Registrarse</a>
-						</li>-->
+						</li>
 					</ul>
 					<div class="clearfix"> </div>
 					<!-- //sidebar-collapse -->
-				</nav>
+				<!-- </nav>
 			</div>
-		</div>
+		</div> -->
 		<!--left-fixed -navigation-->
 		<!-- header-starts -->
 		<div class="sticky-header header-section col-sm-12 col-md-12 col-lg-12">
 			<div class="header-left col-sm-10 col-md-10 col-lg-10">
 				<!--toggle button start-->
-				<div class="col-sm-1 col-md-1 col-lg-1">
-					<button id="showLeftPush" style="margin-left: -70%"><i class="fa fa-bars"></i></button>
-					<!--toggle button end-->
-				</div>
 				<!--logo -->
 				<div class="logo col-sm-2 col-md-2 col-lg-2" id="logoPlacement">
 					<a href="/">
 						<h1>SIADEC</h1>
-						<span style="padding-left:.7em !important;">Invitado</span>
+						<span style="padding-left:.7em !important;">Guest</span>
 					</a>
 				</div>
 				<!--//logo-->
@@ -115,14 +112,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<a href="/login" class="dropdown-toggle col-sm-6 col-md-6 col-lg-6" align="center">
 						<div class="profile_img">	
 							<div class="user-name">
-								<p>Iniciar Sesi&oacute;n</p>
+								<p>User Login</p>
 							</div>
 						</div>
 					</a>
 					<a href="/signup" class="dropdown-toggle col-sm-6 col-md-6 col-lg-6" align="center">
 						<div class="profile_img">
 							<div class="user-name">
-								<p>Registrarse</p>
+								<p>Signup</p>
 							</div>
 						</div>
 					</a>
@@ -137,30 +134,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; Sistema Desarrollado por <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
+		   <p>&copy; Developed by <a href="http://www.cidis.espol.edu.ec" target="_blank">CIDIS</a></p>
 		</div>
         <!--//footer-->
 	</div>
 	<!-- Classie -->
 	<script src="{{ asset('/novus_admin/js/classie.js') }}"></script>
-	<script>
-		var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-			showLeftPush = document.getElementById( 'showLeftPush' ),
-			body = document.body;
-			
-		showLeftPush.onclick = function() {
-			classie.toggle( this, 'active' );
-			classie.toggle( body, 'cbp-spmenu-push-toright' );
-			classie.toggle( menuLeft, 'cbp-spmenu-open' );
-			disableOther( 'showLeftPush' );
-		}
-		
-		function disableOther( button ) {
-			if( button !== 'showLeftPush' ) {
-				classie.toggle( showLeftPush, 'disabled' );
-			}
-		}
-	</script>
+
 
 	@yield('scripts')
 	<!--scrolling js-->

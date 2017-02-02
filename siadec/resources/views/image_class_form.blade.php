@@ -9,21 +9,21 @@
 </div> -->
 <div class="main-page">
 	<div class="elements " id="ej" >
-	<h3>Datos del análisis</h3>
+	<h3>Data Analysis</h3>
 		<section>
 		<div class="col-md-11 col-md-offset-1   weather-grids widget-shadow">
 			<form enctype="multipart/form-data" method="post" action="/analisisMicroscopio">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
 				<div class="header-top">
-					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio</h2>
+					<h2>Microscope Picture Analysis</h2>
 					<div class="clearfix"> </div>
 				</div>
 		<div class="header-bottom">
 					<div class ="form-body">
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="responsable">Responsable:  </label> 
+								<label class="col-sm-2 control-label" for="responsable">Responsibles:  </label> 
 								<div class="col-sm-4"> 
 									<div > 
 									<a href="#" id="responsable" data-type="text" data-name="responsable" class="input_editable">{{$examen->responsable}}</a>
@@ -34,33 +34,37 @@
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="codigo">FechaImagenes: </label> 
+								<label class="col-sm-2 control-label" for="codigo">PictureDate: </label> 
+
 								<div class="col-sm-4"> 
 									<a href="#" id="responsable" class="input_editable" data-type="date" data-name="fecha">{{$examen->fecha}}</a>
 									<!-- <input type="date" value="{{$examen->fecha}}" id="fecha" name="fecha" class="form-control" required>  -->
 								</div>
-								<label class="col-sm-2 control-label" for="empresa">Empresa: </label> 
+								<label class="col-sm-2 control-label" for="empresa">Company: </label> 
 								<div class="col-sm-4"> 
 								<a href="#" id="empresa" class="input_editable" data-type="text" data-name="">{{$examen->empresa}}</a>
 								<!-- 	<input type="text" value="{{$examen->empresa}}"placeholder="Empresa" id="empresa" name="empresa" class="form-control" required>  -->
+
 								</div> 
 							</div>
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="equipos">EquiposUsados: </label> 
+								<label class="col-sm-2 control-label" for="equipos">Equipment: </label> 
 								<div class="col-sm-10"> 
 									<!-- <input type="text" value="{{$examen->equipos}}" placeholder="Equipos usados en la captura de las imagenes" id="equipos" name="equipos" class="form-control" required> 
 									 --><a href="#" id="empresa" class="input_editable" data-type="textarea" data-pk="{{$examen->id}}" data-name="equipos">{{$examen->equipos}}</a>
+
 								</div> 											
 							</div>
 						</div>
 						<div class="form-horizontal">
 							<div class="form-group"> 
-								<label class="col-sm-2 control-label" for="observaciones">Observaciones: </label> 
+								<label class="col-sm-2 control-label" for="observaciones">Observations: </label> 
 								<div class="col-sm-10"> 
 									<!-- <input type="text" value="{{$examen->observaciones}}" placeholder="Observaciones" id="observaciones" name="observaciones" class="form-control" required>  -->
 									<a href="#" id="observaciones" class="input_editable" data-type="textarea" data-pk="{{$examen->id}}" data-name="observaciones">{{$examen->observaciones}}</a>
+
 								</div> 											
 							</div>
 						</div>
@@ -98,15 +102,15 @@
 
 
 
-		<h3>Clasificador de órganos</h3>
+		<h3>Organ Classifier</h3>
 		<section>
 		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
 			<!--<form  method="post" action="/clasificador" enctype="multipart/form-data">-->
 			<!-- <form  method="post" action="/clasificador" enctype="multipart/form-data">
 			 -->	
 			 	<div class="header-top">
-					<h2>An&aacute;lisis de Im&aacute;genes de Microscopio:</h2>
-					<h2>Clasificador de órganos </h2> 
+					<h2>Microscope Picture Analysis:</h2>
+					<h2>Organ Classifier </h2> 
 
 					<div class="clearfix"> </div>
 				</div>
@@ -136,10 +140,10 @@
 			</style>
 			  	<thead >
 			  		<th >
-			  			Ingrese imagen en zoom: 40x
+			  			Add picture with zoom: 40x
 					</th>
 					<th >
-			  			Resultado
+			  			Results
 
 					</th>
 			  	</thead>
@@ -170,9 +174,9 @@
 
 			  		</td>
 			  		<td>
-			  		<div class=" btn-success" id="fileZoom40_result" hidden>Epitelio del estómago</div>
+			  		<div class=" btn-success" id="fileZoom40_result" hidden>Stomach Epithelium</div>
 			  	 	<div id="fileZoom40_process" hidden>
-			  		Procesando..
+			  		Processing...
 			  		<div class = "loader"></div>
 			  		</div>
 			  		
@@ -204,9 +208,9 @@
 
 			  		</td>
 			  		<td>
-			  		<div class=" btn-success" id="fileZoom4_result" hidden>Epitelio del estómago</div>
+			  		<div class=" btn-success" id="fileZoom4_result" hidden>Stomach Epithelium</div>
 			  	 	<div id="fileZoom4_process" hidden>
-			  		Procesando..
+			  		Processing...
 			  		<div class = "loader"></div>
 			  		</div>
 			  		</td>
@@ -237,9 +241,9 @@
 
 			  		</td>
 			  		<td>
-			  		<div class=" btn-success" id="fileZoom10_result" hidden>Epitelio del estómago</div>
+			  		<div class=" btn-success" id="fileZoom10_result" hidden>Stomach Epithelium</div>
 			  	 	<div id="fileZoom10_process" hidden>
-			  		Procesando..
+			  		Processing...
 			  		<div class = "loader"></div>
 			  		</div>
 			  		</td>
@@ -257,17 +261,17 @@
 
 
 
-		<h3>Resultados Finales: Análisis de virus</h3>
+		<h3>Final Results: Virus Scan</h3>
 		<section>
 		<div class="col-md-11 col-md-offset-1 weather-grids widget-shadow">
 		<div class="header-top">
-					<h2>Resultados:</h2>
-					<h2>Análisis de enfermedad </h2> 
+					<h2>Results:</h2>
+					<h2>Sickness Analysis </h2> 
 
 					<div class="clearfix"> </div>
 				</div>
 				<br>
-		<div class="col-md-10 col-md-offset-1">Los resultados siguientes presentan el grado de enfermedad encontrado al analizar las imágenes ingresadas </div>
+		<div class="col-md-10 col-md-offset-1">The Results show the disease degree found on the analysis of the picture submitted. </div>
 		
 		<div><canvas id="myChart" width="400" height="100"></canvas></div>
 		<br>
@@ -311,7 +315,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["WSSV", "Vibriosis", "Grengarinas"],
         datasets: [{
-            label: 'Porcentaje de enfermedad',
+            label: 'Percentage of Sickness',
             data: [100, 29, 43],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
